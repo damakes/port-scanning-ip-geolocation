@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9489dcef650f7b6dca89a187c6d264f2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <img src="https://cdn.ipinfo.io/static/images/countries-flags/US.svg" #alt="Flag" style="width:24px;height:16px;">United States, Fremont, 37.5483,-121.9886
+    
+            <div class="folium-map" id="map_9489dcef650f7b6dca89a187c6d264f2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9489dcef650f7b6dca89a187c6d264f2 = L.map(
+                "map_9489dcef650f7b6dca89a187c6d264f2",
+                {
+                    center: [37.5483, -121.9886],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_80c481724dd0c71a92660a4ca74be915 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_80c481724dd0c71a92660a4ca74be915.addTo(map_9489dcef650f7b6dca89a187c6d264f2);
+        
+    
+                var lat_lng_popup_46790b59f4a98febaaea29b5885122da = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_46790b59f4a98febaaea29b5885122da
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_9489dcef650f7b6dca89a187c6d264f2);
+                    }
+                map_9489dcef650f7b6dca89a187c6d264f2.on('click', latLngPop);
+            
+    
+            var marker_9131c790bebc4931a56e4619be805aa4 = L.marker(
+                [37.5483, -121.9886],
+                {}
+            ).addTo(map_9489dcef650f7b6dca89a187c6d264f2);
+        
+    
+            var icon_95d4fb3cd18623d371dc7ee31bfeaee6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_9131c790bebc4931a56e4619be805aa4.setIcon(icon_95d4fb3cd18623d371dc7ee31bfeaee6);
+        
+    
+        var popup_44ef830463c163f3d88f90355917950e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7fd10d56af1b2ef94dd63a3101a28ed2 = $(`<div id="html_7fd10d56af1b2ef94dd63a3101a28ed2" style="width: 100.0%; height: 100.0%;">city:<small style='color:#990002'>Fremont</small></b><br>continent:<small style='color:#990002'>{'code': 'NA', 'name': 'North America'}</small></b><br>country:<small style='color:#990002'>US</small></b><br>country_currency:<small style='color:#990002'>{'code': 'USD', 'symbol': '$'}</small></b><br>country_flag_url:<small style='color:#990002'>https://cdn.ipinfo.io/static/images/countries-flags/US.svg</small></b><br>country_name:<small style='color:#990002'>United States</small></b><br>hostname:<small style='color:#990002'>scanme.nmap.org</small></b><br>ip:<small style='color:#990002'>45.33.32.156</small></b><br>latitude:<small style='color:#990002'>37.5483</small></b><br>loc:<small style='color:#990002'>37.5483,-121.9886</small></b><br>longitude:<small style='color:#990002'>-121.9886</small></b><br>org:<small style='color:#990002'>AS63949 Akamai Connected Cloud</small></b><br>postal:<small style='color:#990002'>94536</small></b><br>region:<small style='color:#990002'>California</small></b><br>timezone:<small style='color:#990002'>America/Los_Angeles</small></b><br></div>`)[0];
+                popup_44ef830463c163f3d88f90355917950e.setContent(html_7fd10d56af1b2ef94dd63a3101a28ed2);
+            
+        
+
+        marker_9131c790bebc4931a56e4619be805aa4.bindPopup(popup_44ef830463c163f3d88f90355917950e)
+        ;
+
+        
+    
+    
+            marker_9131c790bebc4931a56e4619be805aa4.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fd616dea6b38a12402d1182d89aeed65 = L.circle(
+                [37.5483, -121.9886],
+                {"bubblingMouseEvents": true, "color": "DeepSkyBlue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "DeepSkyBlue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 1000, "stroke": false, "weight": 3}
+            ).addTo(map_9489dcef650f7b6dca89a187c6d264f2);
+        
+</script>
+</html>

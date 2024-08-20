@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d7eda8746851c04dd88c73aeebd9dce8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <img src="https://cdn.ipinfo.io/static/images/countries-flags/FI.svg" #alt="Flag" style="width:24px;height:16px;">Finland, Helsinki, 60.1695,24.9354
+    
+            <div class="folium-map" id="map_d7eda8746851c04dd88c73aeebd9dce8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d7eda8746851c04dd88c73aeebd9dce8 = L.map(
+                "map_d7eda8746851c04dd88c73aeebd9dce8",
+                {
+                    center: [60.1695, 24.9354],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eea482c1314cb1897b4d058f713a749b = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_eea482c1314cb1897b4d058f713a749b.addTo(map_d7eda8746851c04dd88c73aeebd9dce8);
+        
+    
+                var lat_lng_popup_507785ec2518ce055a0ce870300644b9 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_507785ec2518ce055a0ce870300644b9
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_d7eda8746851c04dd88c73aeebd9dce8);
+                    }
+                map_d7eda8746851c04dd88c73aeebd9dce8.on('click', latLngPop);
+            
+    
+            var marker_0a0d1645f14cf18dea5ce85d95c1dedd = L.marker(
+                [60.1695, 24.9354],
+                {}
+            ).addTo(map_d7eda8746851c04dd88c73aeebd9dce8);
+        
+    
+            var icon_9afcaf43a0870d9da2e415585fb43700 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_0a0d1645f14cf18dea5ce85d95c1dedd.setIcon(icon_9afcaf43a0870d9da2e415585fb43700);
+        
+    
+        var popup_2390f9c9c1232b4a74b247b87a79c788 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20abe231a86179a623587f5bcf2cad4d = $(`<div id="html_20abe231a86179a623587f5bcf2cad4d" style="width: 100.0%; height: 100.0%;">city:<small style='color:#990002'>Helsinki</small></b><br>continent:<small style='color:#990002'>{'code': 'EU', 'name': 'Europe'}</small></b><br>country:<small style='color:#990002'>FI</small></b><br>country_currency:<small style='color:#990002'>{'code': 'EUR', 'symbol': '€'}</small></b><br>country_flag_url:<small style='color:#990002'>https://cdn.ipinfo.io/static/images/countries-flags/FI.svg</small></b><br>country_name:<small style='color:#990002'>Finland</small></b><br>hostname:<small style='color:#990002'>a104-103-64-0.deploy.static.akamaitechnologies.com</small></b><br>ip:<small style='color:#990002'>104.103.64.0</small></b><br>latitude:<small style='color:#990002'>60.1695</small></b><br>loc:<small style='color:#990002'>60.1695,24.9354</small></b><br>longitude:<small style='color:#990002'>24.9354</small></b><br>org:<small style='color:#990002'>AS1299 Arelion Sweden AB</small></b><br>postal:<small style='color:#990002'>00100</small></b><br>region:<small style='color:#990002'>Uusimaa</small></b><br>timezone:<small style='color:#990002'>Europe/Helsinki</small></b><br></div>`)[0];
+                popup_2390f9c9c1232b4a74b247b87a79c788.setContent(html_20abe231a86179a623587f5bcf2cad4d);
+            
+        
+
+        marker_0a0d1645f14cf18dea5ce85d95c1dedd.bindPopup(popup_2390f9c9c1232b4a74b247b87a79c788)
+        ;
+
+        
+    
+    
+            marker_0a0d1645f14cf18dea5ce85d95c1dedd.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3714f12b7368e8d411dbef170f2fdb37 = L.circle(
+                [60.1695, 24.9354],
+                {"bubblingMouseEvents": true, "color": "DeepSkyBlue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "DeepSkyBlue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 1000, "stroke": false, "weight": 3}
+            ).addTo(map_d7eda8746851c04dd88c73aeebd9dce8);
+        
+</script>
+</html>

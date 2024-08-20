@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ef6357fa2cc6720c5293bd2a694b8732 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <img src="https://cdn.ipinfo.io/static/images/countries-flags/US.svg" #alt="Flag" style="width:24px;height:16px;">United States, Boston, 42.3584,-71.0598
+    
+            <div class="folium-map" id="map_ef6357fa2cc6720c5293bd2a694b8732" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ef6357fa2cc6720c5293bd2a694b8732 = L.map(
+                "map_ef6357fa2cc6720c5293bd2a694b8732",
+                {
+                    center: [42.3584, -71.0598],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_de65a061ccd5d28c98ab24ed68a51e2b = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_de65a061ccd5d28c98ab24ed68a51e2b.addTo(map_ef6357fa2cc6720c5293bd2a694b8732);
+        
+    
+                var lat_lng_popup_cfc0823495d20dd28ba1dea7c4875ea0 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_cfc0823495d20dd28ba1dea7c4875ea0
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_ef6357fa2cc6720c5293bd2a694b8732);
+                    }
+                map_ef6357fa2cc6720c5293bd2a694b8732.on('click', latLngPop);
+            
+    
+            var marker_3c3554692bd1d10b5558a832547273ef = L.marker(
+                [42.3584, -71.0598],
+                {}
+            ).addTo(map_ef6357fa2cc6720c5293bd2a694b8732);
+        
+    
+            var icon_f66feb36d244712b37f1ecd05b1c2bf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_3c3554692bd1d10b5558a832547273ef.setIcon(icon_f66feb36d244712b37f1ecd05b1c2bf0);
+        
+    
+        var popup_f31dc03ee09c406e4ccd84713fe63ad2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c62305a1c7e08161a8626086b1503096 = $(`<div id="html_c62305a1c7e08161a8626086b1503096" style="width: 100.0%; height: 100.0%;">city:<small style='color:#990002'>Boston</small></b><br>continent:<small style='color:#990002'>{'code': 'NA', 'name': 'North America'}</small></b><br>country:<small style='color:#990002'>US</small></b><br>country_currency:<small style='color:#990002'>{'code': 'USD', 'symbol': '$'}</small></b><br>country_flag_url:<small style='color:#990002'>https://cdn.ipinfo.io/static/images/countries-flags/US.svg</small></b><br>country_name:<small style='color:#990002'>United States</small></b><br>hostname:<small style='color:#990002'>unn-149-40-50-217.datapacket.com</small></b><br>ip:<small style='color:#990002'>149.40.50.217</small></b><br>latitude:<small style='color:#990002'>42.3584</small></b><br>loc:<small style='color:#990002'>42.3584,-71.0598</small></b><br>longitude:<small style='color:#990002'>-71.0598</small></b><br>org:<small style='color:#990002'>AS212238 Datacamp Limited</small></b><br>postal:<small style='color:#990002'>02108</small></b><br>region:<small style='color:#990002'>Massachusetts</small></b><br>timezone:<small style='color:#990002'>America/New_York</small></b><br></div>`)[0];
+                popup_f31dc03ee09c406e4ccd84713fe63ad2.setContent(html_c62305a1c7e08161a8626086b1503096);
+            
+        
+
+        marker_3c3554692bd1d10b5558a832547273ef.bindPopup(popup_f31dc03ee09c406e4ccd84713fe63ad2)
+        ;
+
+        
+    
+    
+            marker_3c3554692bd1d10b5558a832547273ef.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8ead5228e8a85f61da440765802afb2a = L.circle(
+                [42.3584, -71.0598],
+                {"bubblingMouseEvents": true, "color": "DeepSkyBlue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "DeepSkyBlue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 1000, "stroke": false, "weight": 3}
+            ).addTo(map_ef6357fa2cc6720c5293bd2a694b8732);
+        
+</script>
+</html>
